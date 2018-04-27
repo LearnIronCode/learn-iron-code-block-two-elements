@@ -5,7 +5,10 @@
  */
 
 .wp-block-learn-iron-code-block-two-elements-iron-code-two-elements {
-	background-color: #000;
+	background-color: #007fbc;
+	border: 5px solid #fff;
 	color: #fff;
-	padding: 2px;
+	margin: 0 0 20px;
+	outline: 5px solid #19a7d9;
+	padding: 10px;
 }
