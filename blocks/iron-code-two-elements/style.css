@@ -12,3 +12,9 @@
 	outline: 5px solid #19a7d9;
 	padding: 10px;
 }
+
+.wp-block-learn-iron-code-block-two-elements-iron-code-two-elements .learn-iron-code-block-two-elements--heading {
+	color: inherit;
+	font-size: 32px;
+	font-weight: bold;
+}

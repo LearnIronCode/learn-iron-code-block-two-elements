@@ -54,10 +54,31 @@ function iron_code_two_elements_block_init() {
 		filemtime( "$dir/$style_css" )
 	);
 
+	/**
+	 * Attributes are the editable variables in our block.
+	 * Here we create one attribute called "heading" (we could use any name here).
+	 *
+	 * When the editor is loaded, the attributes are populated by parsing the
+	 * block as it is stored in the database and extracting the values.
+	 * We control how the block is stored using our "save:" method in index.js
+	 * The "selector" indicates what element in our block contains the value.
+	 * The "source" indicates what part of the selected element to extract,
+	 * the most common is text (the content of the tag), however other parts of
+	 * the tag can be used (e.g. id, class, rel, href, src, alt).
+	 */
+	$attributes = array(
+		'heading' => array(
+			'type'     => 'string',
+			'selector' => 'h2',
+			'source'   => 'text',
+		),
+	);
+
 	register_block_type( 'learn-iron-code-block-two-elements/iron-code-two-elements', array(
 		'editor_script' => 'iron-code-two-elements-block-editor',
 		'editor_style'  => 'iron-code-two-elements-block-editor',
 		'style'         => 'iron-code-two-elements-block',
+		'attributes'    => $attributes,
 	) );
 }
 add_action( 'init', 'iron_code_two_elements_block_init' );
