@@ -56,7 +56,8 @@ function iron_code_two_elements_block_init() {
 
 	/**
 	 * Attributes are the editable variables in our block.
-	 * Here we create one attribute called "heading" (we could use any name here).
+	 * Here we create one attribute called "heading" (we could use any name here)
+	 * and a second attribute called "content" (again any name would work).
 	 *
 	 * When the editor is loaded, the attributes are populated by parsing the
 	 * block as it is stored in the database and extracting the values.
@@ -70,6 +71,11 @@ function iron_code_two_elements_block_init() {
 		'heading' => array(
 			'type'     => 'string',
 			'selector' => 'h2',
+			'source'   => 'text',
+		),
+		'content' => array(
+			'type'     => 'string',
+			'selector' => 'p',
 			'source'   => 'text',
 		),
 	);
